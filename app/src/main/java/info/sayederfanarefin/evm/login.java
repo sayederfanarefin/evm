@@ -1,5 +1,6 @@
 package info.sayederfanarefin.evm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,6 +22,10 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(et.getText().toString().equals("666")){
+
+                    Intent i = new Intent(login.this, home.class);
+                    startActivity(i);
+                    finish();
 
                 }
             }
