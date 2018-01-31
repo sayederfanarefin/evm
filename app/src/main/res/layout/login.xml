@@ -8,11 +8,11 @@
     android:background="@color/primary_light">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary"
-        android:paddingLeft="64dp"
-        android:paddingRight="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
         android:paddingTop="96dp"
         android:paddingBottom="96dp"
         android:layout_centerVertical="true"
@@ -22,27 +22,29 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primary_text"
+                android:textColor="@color/secondary_text"
                 android:textSize="24dp"
                 android:textAlignment="center"
                 android:layout_marginBottom="24dp"
                 android:text="Log in" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/primary_light"
                 android:textSize="24dp"
                 android:id="@+id/pin"
                 android:text="Enter P I N"
                 android:padding="24dp"
-                android:textColor="@color/primary_text"/>
+                android:textColor="@color/secondary_text"/>
 
 
 
