@@ -6,12 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.esafirm.imagepicker.features.ImagePicker;
+import com.esafirm.imagepicker.model.Image;
+
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         Button enter_pin = (Button) findViewById(R.id.enter_pin);
         enter_pin.setOnClickListener(new View.OnClickListener() {
@@ -26,4 +33,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
