@@ -183,6 +183,7 @@ public class home extends AppCompatActivity implements ArduinoListener {
 //                    return good_mathces;
 
                     Log.v("====================", "end"+String.valueOf(good_mathces));
+                    //http://answers.opencv.org/question/181449/image-matching-using-opencv-orb-android/
                 }
                 break;
                 default: {
