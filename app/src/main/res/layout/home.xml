@@ -7,6 +7,14 @@
     tools:context="info.sayederfanarefin.evm.MainActivity"
     android:background="@color/primary_light">
 
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iamhurt"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="512px"-->
+        <!--android:layout_above="@+id/proceed"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +71,10 @@
         android:textColor="@color/primary_light"
         android:id="@+id/proceed"
         android:text="Proceed"/>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/asd">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,5 +87,7 @@
         android:textColor="@color/primary_light"
         android:padding="12dp"
         android:layout_margin="16dp"/>
+</ScrollView>
+
 
 </RelativeLayout>
