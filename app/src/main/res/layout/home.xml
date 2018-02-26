@@ -8,58 +8,58 @@
     android:background="@color/primary_light">
 
 
-    <!--<ImageView-->
-        <!--android:id="@+id/iamhurt"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="512px"-->
-        <!--android:layout_above="@+id/proceed"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true" />-->
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/iamhurt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/primary"
-        android:layout_marginLeft="64dp"
-        android:layout_marginRight="64dp"
-        android:paddingTop="96dp"
-        android:paddingBottom="96dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_height="512px"
+        android:layout_above="@+id/proceed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/primary"-->
+        <!--android:layout_marginLeft="64dp"-->
+        <!--android:layout_marginRight="64dp"-->
+        <!--android:paddingTop="96dp"-->
+        <!--android:paddingBottom="96dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--&gt;-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/primary_text"
-                android:textSize="16dp"
-                android:textAlignment="center"
-                android:layout_marginBottom="24dp"
-                android:text="Enter NID" />
+            <!--<TextView-->
+                <!--android:id="@+id/textView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/primary_text"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:layout_marginBottom="24dp"-->
+                <!--android:text="Enter NID" />-->
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primary_light"
-                android:textSize="24dp"
-                android:id="@+id/pin"
-                android:textAlignment="center"
-                android:text="N I D"
-                android:padding="12dp"
-                android:layout_margin="12dp"
-                android:textColor="@color/primary_text"/>
-
-
-
-        </LinearLayout>
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/primary_light"-->
+                <!--android:textSize="24dp"-->
+                <!--android:id="@+id/pin"-->
+                <!--android:textAlignment="center"-->
+                <!--android:text="N I D"-->
+                <!--android:padding="12dp"-->
+                <!--android:layout_margin="12dp"-->
+                <!--android:textColor="@color/primary_text"/>-->
 
 
-    </RelativeLayout>
+
+        <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->
 
 
     <Button

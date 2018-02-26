@@ -3,6 +3,7 @@ package info.sayederfanarefin.evm;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.hardware.usb.UsbDevice;
 import android.net.Uri;
 import android.os.Bundle;
@@ -62,7 +63,7 @@ public class home extends AppCompatActivity implements ArduinoListener {
         textView = findViewById(R.id.status_text);
         proceed = (Button) findViewById(R.id.proceed);
 
-       // iamhurt = (ImageView) findViewById(R.id.iamhurt);
+        iamhurt = (ImageView) findViewById(R.id.iamhurt);
 
 //        Intent intent = new Intent();
 //        intent.setType("image/*");
@@ -101,6 +102,10 @@ public class home extends AppCompatActivity implements ArduinoListener {
     }
 
     String globalString = "";
+    byte[] bytesImage = new byte[10];
+    Bitmap bmp;
+    boolean flag = true;
+
     @Override
     public void onArduinoMessage(byte[] bytes) {
 
@@ -111,13 +116,38 @@ public class home extends AppCompatActivity implements ArduinoListener {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        if(globalString.contains("Streaming image")){
+        if(globalString.contains("Streaming image") && flag){
 
-            InputStream in = new ByteArrayInputStream(bytes);
-           // BufferedImage bImageFromConvert = ImageIO.read(in);
-            display("==== Received: streaming image");
+            byte[] bytesImageTemp = new byte[bytesImage.length + bytes.length ];
+            for(int i =0; i < bytesImage.length; i++){
+                bytesImageTemp[i] = bytesImage[i];
+            }
+            for(int i =0; i < bytes.length; i++){
+                bytesImageTemp[bytesImage.length + i] = bytes[i];
+            }
+            bytesImage= new byte[bytesImageTemp.length];
+            for(int i =0; i < bytesImageTemp.length; i++){
+                bytesImage[i] = bytesImageTemp[i];
+            }
+
+            if(globalString.contains("Image taken")){
+                flag = false;
+                InputStream instream = new ByteArrayInputStream(bytesImage);
+                bmp = BitmapFactory.decodeStream(instream);
+               try{
+                   iamhurt.setImageBitmap(bmp);
+               }catch (Exception e){
+                   display(e.getMessage());
+               }
+                // BufferedImage bImageFromConvert = ImageIO.read(in);
+                display("==== done image ======");
+            }
+
+            display("==== receiving image ======");
+            display("====global: " + globalString);
         }else{
             display("Received: " + a);
+        
         }
     }
 
@@ -148,6 +178,7 @@ public class home extends AppCompatActivity implements ArduinoListener {
             @Override
             public void run() {
                 textView.append(message + "\n");
+                scrollView.fullScroll(View.FOCUS_DOWN);
             }
         });
     }
